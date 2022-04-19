@@ -5,7 +5,7 @@ module.exports = {
     alias: ["help","?","list"],
     desc: "List all command",
     type: "main",
-    start: async(hisoka, m, { commands, args, prefix, text, toUpper, name }) => {
+    start: async(comel, m, { commands, args, prefix, text, toUpper, name }) => {
         if (args[0]) {
             let data = []
             let name = args[0].toLowerCase()
@@ -22,13 +22,13 @@ module.exports = {
 
             for (let type of commands.type) {
                 teks += `┌──⭓ *${toUpper(type)} Menu*\n`
-                teks += `│\n`
+                teks += `│\nJangan Di Spam Ya\n`
                 teks += `${commands.list[type].filter(v => v.type !== "hide").map((cmd) => `│⭔ ${prefix + cmd.name}`).join("\n")}\n`
                 teks += `│\n`
                 teks += `└───────⭓\n\n`
             }
-            let media = await MessageMedia.fromUrl("https://camo.githubusercontent.com/7ccd7d67ce243f1356a3aec3b96725231ea54253028390711ba30c7203e4b6e4/68747470733a2f2f74656c656772612e70682f66696c652f3039636330393831636366303737353464306166362e6a7067", { unsafeMime: true })
-            hisoka.sendMessage(m.from, media, { caption: teks, quotedMessageId: m.id._serialized })
+            let media = await MessageMedia.fromUrl("https://i.ibb.co/hmynsph/f09f40f4a37713f73de30.jpg", { unsafeMime: true })
+            comel.sendMessage(m.from, media, { caption: teks, quotedMessageId: m.id._serialized })
         }
     }
 }
