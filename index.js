@@ -42,7 +42,7 @@ let sessionPath = `./tmp/${global.sessionName}`
 
 async function connect() {
     await readCommands()
-    const hisoka = new Client({
+    const comel = new Client({
         authStrategy: new LocalAuth({
             dataPath: `./${global.sessionName}`
         }),
@@ -51,45 +51,45 @@ async function connect() {
         }
     })
 
-    hisoka.initialize()
+    comel.initialize()
 
-    hisoka.on("qr", qr => {
+    comel.on("qr", qr => {
         qrcode.generate(qr, { small: true })
     })
 
-    hisoka.on("authenticated", async(auth) => {
+    comel.on("authenticated", async(auth) => {
         console.log(auth)
     })
 
-    hisoka.on("auth_failure", async(auth_err) => {
+    comel.on("auth_failure", async(auth_err) => {
         console.log(auth_err)
     })
 
-    hisoka.on("ready", () => {
+    comel.on("ready", () => {
         console.log(chalk.greenBright("Client Is Already Running"))
     })
 
-    hisoka.on("disconnected", async(reason) => {
+    comel.on("disconnected", async(reason) => {
         console.log("Client Was Logged Out", reason)
     })
 
-    hisoka.on("message_create", (msg) => {
+    comel.on("message_create", (msg) => {
         try {
             if (!msg) return
             if (!global.options.public && !msg.fromMe) return
             if (msg.id.id.startsWith("3EB") && msg.id.id.length == 20) return
-            require("./hisoka_chat")(hisoka, msg, Commands)
+            require("./comel_chat")(comel, msg, Commands)
         } catch(e) {
             console.error(e)
         }
     })
 
-    hisoka.on("group_update", (action) => {
+    comel.on("group_update", (action) => {
         if (!action) return action
-        require("./hisoka_group")(hisoka, action)
+        require("./comel_group")(comel, action)
     })
 
-    return hisoka
+    return comel
 }
 
 connect()

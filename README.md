@@ -1,22 +1,22 @@
 <div align="center">
-<img src="https://hisoka-morou.netlify.app/assets/image/Hisoka-Morrou.png" width="150" height="150" border="0" alt="PFFP">
+<img src="https://i.ibb.co/hmynsph/f09f40f4a37713f73de30.jpg" width="150" height="150" border="0" alt="PFFP">
 
 #### Rules
-read the rules at [`term-of-service`](https://hisoka-morou.netlify.app/tos)
+read the rules at [`term-of-service`]
 
 
-# hisoka-waweb.js
+# comel-waweb.js
  Script Bot WhatsApp Multi Device dengan menggunakan Library whatsapp-web.js
 
 ## [![JavaScript](https://img.shields.io/badge/JavaScript-d6cc0f?style=for-the-badge&logo=javascript&logoColor=white)](https://javascript.com) [![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-<a href="https://api.whatsapp.com/send?phone=6285784918313&text=.menu&source=&data=&app_absent="> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="support" /></a>
+<a href="https://api.whatsapp.com/send?phone=6281268414805&text=.menu&source=&data=&app_absent="> <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="support" /></a>
 
 
 </div><br />
 <br />
 
 ## Config
-Isi semua yang dibutuhkan di file [`config.js`](https://github.com/Hisoka-Morrou/hisoka-waweb.js/blob/main/config.js)<br />
+Isi semua yang dibutuhkan di file [`config.js`](https://github.com/dmibot/comelweb/blob/main/config.js)<br />
 ```js
 global.APIs = {
 	zenz: 'https://zenzapi.xyz',
@@ -29,15 +29,13 @@ global.options = {
     mute: false,
     public: true
 }
-global.owner = ["6288292024190","6285784918313"]
-global.sessionName = "hisoka"
-global.packname = "hisoka-waweb.js"
-global.author = "Dika Ardnt."
+global.owner = ["Your Number","Your Number"]
+global.sessionName = "comel"
+global.packname = "comel-waweb.js"
+global.author = "Ayra Comel."
 
 ```
 
-## Request atau report bug
-Untuk request atau report bug bisa open issue [Issues](https://github.com/Hisoka-Morrou/hisoka-waweb.js/issues)
 
 # Requirements
 * [Node.js](https://nodejs.org/en/)
@@ -52,8 +50,8 @@ Untuk request atau report bug bisa open issue [Issues](https://github.com/Hisoka
 # Installation
 ## 📝 Cloning this repo
 ```cmd
-> git clone https://github.com/Hisoka-Morrou/hisoka-waweb.js/
-> cd hisoka-waweb.js
+> git clone https://github.com/comel-Morrou/comel-waweb.js/
+> cd comel-waweb.js
 ```
 
 # install semua module
@@ -108,10 +106,8 @@ npm start
 
 # Thanks To
 
-* [`Hisoka Team`](https://github.com/Hisoka-Morrou)
 * [`Dika Ardnt.`](https://github.com/DikaArdnt)
 * [`pedroslopez`](https://github.com/pedroslopez/whatsapp-web.js)
 
-# License
-**hisoka-waweb.js** © [DikaArdnt](https://github.com/DikaArdnt), released under the MIT License.
-Authored and maintained by Dika Ardnt.
+License.
+Authored and maintained by AyraKu

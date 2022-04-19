@@ -14,7 +14,7 @@ global.APIs = {
 
 // Apikey
 global.APIKeys = {
-	'https://zenzapis.xyz': 'Your Apikey',
+	'https://zenzapis.xyz': 'FCE0E30B92',
 }
 
 // Other
@@ -37,10 +37,10 @@ global.options = {
     mute: false,
     public: true
 }
-global.owner = ["6288292024190","6285784918313"]
-global.sessionName = "hisoka"
-global.packname = "hisoka-waweb.js"
-global.author = "Dika Ardnt."
+global.owner = ["6281268414805","62811666884"]
+global.sessionName = "comel"
+global.packname = "comel-waweb.js"
+global.author = "Ayra-Comel"
 
 
 function nocache(module, cb = () => {}) {

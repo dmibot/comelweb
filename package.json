@@ -1,5 +1,5 @@
 {
-  "name": "hisoka-waweb.js",
+  "name": "comel-waweb.js",
   "version": "1.0.0",
   "description": "Script Bot WhatsApp Multi Device Using Library whatsapp-web.js",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hisoka-Morrou/hisoka-waweb.js.git"
+    "url": "git+https://github.com/dmibot/comelweb.git"
   },
   "keywords": [
     "wabot",
@@ -16,15 +16,15 @@
     "puppeteer",
     "wawebjs",
     "whatsapp-web.js",
-    "hisoka-waweb.js",
+    "comelweb",
     "whatsapp-bot"
   ],
-  "author": "Dika Ardnt.",
+  "author": "Opux.",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Hisoka-Morrou/hisoka-waweb.js/issues"
+    "url": "https://github.com/dmibot/comelweb.git/issues"
   },
-  "homepage": "https://github.com/Hisoka-Morrou/hisoka-waweb.js#readme",
+  "homepage": "https://github.com/dmibot/comelweb.git#readme",
   "dependencies": {
     "axios": "^0.26.1",
     "chalk": "^4.1.2",
