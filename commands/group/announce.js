@@ -7,7 +7,7 @@ module.exports = {
     desc: "Set Announce Group",
     type: "group",
     example: "List Option :\n\n1. open\n2. close\n3.buka\n4. tutup\n\nExample : %prefix%command buka",
-    start: async(hisoka, m, { text, args }) => {
+    start: async(comel, m, { text, args }) => {
         let chat = await m.getChat()
         switch(text.toLowerCase()) {
             case "buka":

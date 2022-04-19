@@ -7,7 +7,7 @@ module.exports = {
     desc: "Change Description From Group",
     type: "group",
     example: "Example : %prefix%command <desc>",
-    start: async(hisoka, m, { text }) => {
+    start: async(comel, m, { text }) => {
         let chat = await m.getChat()
         chat.setDescription(text).then((res) => {
             m.reply(jsonformat(res))

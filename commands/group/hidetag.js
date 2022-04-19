@@ -6,15 +6,15 @@ module.exports = {
     alias: ["totag","tagall"],
     desc: "Send Message With Tag All Participants",
     type: "group",
-    start: async(hisoka, m, { participants, quoted, text }) => {
+    start: async(comel, m, { participants, quoted, text }) => {
         let _participants = participants.map(v => v.id._serialized)
         let mentions = []
-        for (let jid of _participants) mentions.push(await hisoka.getChatById(jid))
+        for (let jid of _participants) mentions.push(await comel.getChatById(jid))
         if (m.hasMedia) {
             let message = await quoted.downloadMedia()
-            hisoka.sendMessage(m.from, message, { mentions })
+            comel.sendMessage(m.from, message, { mentions })
         } else {
-            hisoka.sendMessage(m.from, text, { mentions })
+            comel.sendMessage(m.from, text, { mentions })
         }
     },
     isGroup: true,

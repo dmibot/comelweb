@@ -7,7 +7,7 @@ module.exports = {
     desc: "Add User From Group",
     type: "group",
     example: "Example : %prefix%command <tag>. <tag> = @62xxx",
-    start: async(hisoka, m, { quoted, text, participants }) => {
+    start: async(comel, m, { quoted, text, participants }) => {
         let chat = await m.getChat()
         let _participants = participants.map(v => v.id._serialized)
         let users = (await Promise.all(
@@ -15,7 +15,7 @@ module.exports = {
             .filter(v => v.length > 4 && v.length < 20 && !_participants.includes(v + 'c.us'))
             .map(async v => [
                 v,
-                await hisoka.isRegisteredUser(v + '@c.us')
+                await comel.isRegisteredUser(v + '@c.us')
             ])
         )).filter(v => v[1]).map(v => v[0] + '@c.us')
         chat.addParticipants(users).then((res) => {

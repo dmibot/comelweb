@@ -7,7 +7,7 @@ module.exports = {
     desc: "Change Group Name From Group",
     type: "group",
     example: "Example : %prefix%command <name>",
-    start: async(hisoka, m, { text }) => {
+    start: async(comel, m, { text }) => {
         let chat = await m.getChat()
         chat.setSubject(text).then((res) => {
             m.reply(jsonformat(res))
