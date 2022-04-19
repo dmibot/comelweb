@@ -11,7 +11,7 @@ module.exports = {
     alias:["toimg","tovideo","tovid"],
     desc: "Convert webp to Image",
     type: "convert",
-    start: async(hisoka, m, { mime, quoted }) => {
+    start: async(comel, m, { mime, quoted }) => {
         if (!/webp/.test(mime)) return m.reply(`Hanya Support mime webp`)
         let message = await quoted.downloadMedia()
         let buff = Buffer.from(message.data, "base64")
@@ -22,7 +22,7 @@ module.exports = {
                 fs.unlinkSync(dir)
                 if(err) throw err
                 let media = MessageMedia.fromFilePath(ran)
-                hisoka.sendMessage(m.from, media, { caption: `Sticker to Image`, quotedMessageId: m.id._serialized })
+                comel.sendMessage(m.from, media, { caption: `Sticker to Image`, quotedMessageId: m.id._serialized })
                 fs.unlinkSync(ran)
             })
         } else if (quoted._data.isAnimated) {
@@ -31,7 +31,7 @@ module.exports = {
             fs.writeFileSync(dir, buff)
             let webp = await webp2mp4File(dir)
             let media = MessageMedia.fromUrl(webp.result)
-            hisoka.sendMessage(m.from, media, { caption: `Sticker to Video`, quotedMessageId: m.id._serialized })
+            comel.sendMessage(m.from, media, { caption: `Sticker to Video`, quotedMessageId: m.id._serialized })
             fs.unlinkSync(dir)
         }
     }
