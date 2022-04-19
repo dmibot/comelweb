@@ -5,7 +5,7 @@ module.exports = {
     alias: ["metu","keluar"],
     desc: "Leave From Group",
     type: "owner",
-    start: async(hisoka, m) => {
+    start: async(comel, m) => {
         let chat = await m.getChat()
         if (chat.isGroup) {
             await chat.leave().then((res) => {
